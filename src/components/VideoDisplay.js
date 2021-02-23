@@ -15,8 +15,8 @@ function VideoDisplay({title, embedUrl, views, createdAt, upVotes, downVotes, ha
     return (
         <div>
             <iframe
-            width="919"
-            height="525"
+            width="600"
+            height="325"
             src={embedUrl}
             frameborder="0"
             allowfullscreen
