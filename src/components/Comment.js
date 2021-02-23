@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 
-function Comment({user, comment, key, handleRemoveComment, remove}) {
+function Comment({user, comment, handleRemoveComment, remove}) {
     const [upVote, setUpVote] = useState(0)
     const [downVote, setDownVote] = useState(0)
     
@@ -12,14 +12,13 @@ function Comment({user, comment, key, handleRemoveComment, remove}) {
         setDownVote(downVote + 1)
     }
 
-    remove ? null : 
     return (
-        <div key = {key}>
+        <div >
             <strong>{user}</strong>
             <br/>
             <small>{comment}</small>
             <br />
-            <button onClick={handleRemoveComment} >Remove Comment</button>
+            <button onClick={handleRemoveComment} value={comment} >Remove Comment</button>
             <button onClick={handleUpVotes}>{upVote} 👍</button>
             <button onClick={handleDownVotes}>{downVote} 👎</button>
         </div>
